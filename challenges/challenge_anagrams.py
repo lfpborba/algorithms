@@ -19,6 +19,7 @@ def is_anagram(first_string, second_string):
 def merge_sort(word, start=0, end=None):
     if end is None:
         end = len(word)
+
     if (end - start) > 1:
         mid = (end + start) // 2
         merge_sort(word, start, mid)
@@ -36,12 +37,15 @@ def merge(word, start, mid, end):
         if left_index >= len(left):
             word[general_index] = right[right_index]
             right_index += 1
+
         elif right_index >= len(right):
             word[general_index] = left[left_index]
             left_index += 1
+
         elif left[left_index] < right[right_index]:
             word[general_index] = left[left_index]
             left_index += 1
+
         else:
             word[general_index] = right[right_index]
             right_index += 1
