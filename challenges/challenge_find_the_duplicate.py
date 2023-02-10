@@ -7,7 +7,7 @@ def find_duplicate(nums):
         if num in nums_set:
             return num
         nums_set.add(num)
-        
+
     return False
 
 
